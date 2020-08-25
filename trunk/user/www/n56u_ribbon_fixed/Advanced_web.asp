@@ -136,9 +136,23 @@ function applyRule(){
 									<div class="alert alert-info" style="margin: 10px;"><#Menu_Customization_desc#></div>
 									<table width="100%" align="center" cellpadding="4" cellspacing="0" class="table">
 										<tr >
+											<th width="50%"><#menu3#></th>
+											<td>
+												<div class="main_itoggle">
+													<div id="w_ai_on_of">
+														<input type="checkbox" id="w_ai_fake" <% nvram_match_x("", "w_ai", "1", "value=1 checked"); %><% nvram_match_x("", "w_ai", "0", "value=0"); %>  />
+													</div>
+												</div>
+												<div style="position: absolute; margin-left: -10000px;">
+													<input type="radio" value="1" name="w_ai" id="w_ai_1" class="input" <% nvram_match_x("", "w_ai", "1", "checked"); %> /><#checkbox_Yes#>
+													<input type="radio" value="0" name="w_ai" id="w_ai_0" class="input" <% nvram_match_x("", "w_ai", "0", "checked"); %> /><#checkbox_No#>
+												</div>
+											</td>
+										</tr>
+										<tr >
 											<th width="50%"><#menu2#></th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_vpn_s_on_of">
 														<input type="checkbox" id="w_vpn_s_fake" <% nvram_match_x("", "w_vpn_s", "1", "value=1 checked"); %><% nvram_match_x("", "w_vpn_s", "0", "value=0"); %>  />
 													</div>
@@ -152,7 +166,7 @@ function applyRule(){
 										<tr >
 											<th width="50%"><#menu6#></th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_vpn_c_on_of">
 														<input type="checkbox" id="w_vpn_c_fake" <% nvram_match_x("", "w_vpn_c", "1", "value=1 checked"); %><% nvram_match_x("", "w_vpn_c", "0", "value=0"); %>  />
 													</div>
@@ -166,7 +180,7 @@ function applyRule(){
 										<tr >
 											<th width="50%"><#menu4#></th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_wnet_on_of">
 														<input type="checkbox" id="w_wnet_fake" <% nvram_match_x("", "w_wnet", "1", "value=1 checked"); %><% nvram_match_x("", "w_wnet", "0", "value=0"); %>  />
 													</div>
@@ -180,7 +194,7 @@ function applyRule(){
 										<tr >
 											<th width="50%"><#menu5_6#></th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_sys_on_of">
 														<input type="checkbox" id="w_sys_fake" <% nvram_match_x("", "w_sys", "1", "value=1 checked"); %><% nvram_match_x("", "w_sys", "0", "value=0"); %>  />
 													</div>
@@ -194,7 +208,7 @@ function applyRule(){
 										<tr >
 											<th width="50%"><#menu5_4#></th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_usb_on_of">
 														<input type="checkbox" id="w_usb_fake" <% nvram_match_x("", "w_usb", "1", "value=1 checked"); %><% nvram_match_x("", "w_usb", "0", "value=0"); %>  />
 													</div>
@@ -208,7 +222,7 @@ function applyRule(){
 										<tr >
 											<th width="50%"><#menu5_9#></th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_net_on_of">
 														<input type="checkbox" id="w_net_fake" <% nvram_match_x("", "w_net", "1", "value=1 checked"); %><% nvram_match_x("", "w_net", "0", "value=0"); %>  />
 													</div>
@@ -222,7 +236,7 @@ function applyRule(){
 										<tr >
 											<th width="50%"><#menu5_7#></th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_log_on_of">
 														<input type="checkbox" id="w_log_fake" <% nvram_match_x("", "w_log", "1", "value=1 checked"); %><% nvram_match_x("", "w_log", "0", "value=0"); %>  />
 													</div>
@@ -236,7 +250,7 @@ function applyRule(){
 										<tr id="row_wscu" style="display:none">
 											<th width="50%">Scutclient</th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_scu_on_of">
 														<input type="checkbox" id="w_scu_fake" <% nvram_match_x("", "w_scu", "1", "value=1 checked"); %><% nvram_match_x("", "w_scu", "0", "value=0"); %>  />
 													</div>
@@ -250,7 +264,7 @@ function applyRule(){
 										<tr id="row_wdnsf" style="display:none">
 											<th width="50%" >DNS-forwarder</th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_dnsf_on_of">
 														<input type="checkbox" id="w_dnsf_fake" <% nvram_match_x("", "w_dnsf", "1", "value=1 checked"); %><% nvram_match_x("", "w_dnsf", "0", "value=0"); %>  />
 													</div>
@@ -264,7 +278,7 @@ function applyRule(){
 										<tr id="row_wss" style="display:none">
 											<th width="50%"><#menu5_16#></th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_ss_on_of">
 														<input type="checkbox" id="w_ss_fake" <% nvram_match_x("", "w_ss", "1", "value=1 checked"); %><% nvram_match_x("", "w_ss", "0", "value=0"); %>  />
 													</div>
@@ -278,7 +292,7 @@ function applyRule(){
 										<tr id="row_wmen" style="display:none">
 											<th width="50%" >Mentohust</th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_men_on_of">
 														<input type="checkbox" id="w_men_fake" <% nvram_match_x("", "w_men", "1", "value=1 checked"); %><% nvram_match_x("", "w_men", "0", "value=0"); %>  />
 													</div>
@@ -292,7 +306,7 @@ function applyRule(){
 										<tr id="row_wadbyby" style="display:none">
 											<th width="50%"><#menu5_20#></th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_adbyby_on_of">
 														<input type="checkbox" id="w_adbyby_fake" <% nvram_match_x("", "w_adbyby", "1", "value=1 checked"); %><% nvram_match_x("", "w_adbyby", "0", "value=0"); %>  />
 													</div>
@@ -306,7 +320,7 @@ function applyRule(){
 										<tr id="row_wpdnsd" style="display:none">
 											<th width="50%" ><#menu5_21_1#></th>
 											<td>
-													<div class="main_itoggle">
+												<div class="main_itoggle">
 													<div id="w_pdnsd_on_of">
 														<input type="checkbox" id="w_pdnsd_fake" <% nvram_match_x("", "w_pdnsd", "1", "value=1 checked"); %><% nvram_match_x("", "w_pdnsd", "0", "value=0"); %>  />
 													</div>
@@ -317,6 +331,7 @@ function applyRule(){
 												</div>
 											</td>
 										</tr>
+										<tr>
 											<td colspan="2">
 												<br />
 												<center><input class="btn btn-primary" style="width: 219px" type="button" value="<#CTL_apply#>" onclick="applyRule()" /></center>
